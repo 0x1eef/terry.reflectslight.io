@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require "ryo"
+require "nanoc-webpack"
+require "nanoc-tidy"
+
+compile "/js/index.tsx" do
+  filter(:webpack, args: {"--config" => File.join(Dir.getwd, "webpack.development.js")})
+  write("/js/index.js")
+end
+
+compile "/css/index.scss" do
+  filter(:sass, syntax: :scss)
+#  filter(:rainpress)
+  write("/css/index.css")
+end
+
+compile "/html/index.html.erb" do
+  context = Ryo.from({})
+  filter(:erb, locals: {context:})
+  filter(:tidy)
+  write "/index.html"
+end
+
+compile "/i/*.png" do
+  write(item.identifier.to_s)
+end
+
+compile "/v/*.mp4" do
+  write(item.identifier.to_s)
+end
+
+compile "/**/*" do
+  write(nil)
+end

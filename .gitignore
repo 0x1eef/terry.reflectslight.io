@@ -1,0 +1,6 @@
+/.gems/
+/node_modules/
+/build/
+/src/v/
+/tmp/
+*.log

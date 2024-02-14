@@ -1,0 +1,17 @@
+@import "tail.min";
+
+html, body {
+  height: 100%;
+}
+
+video {
+  overflow: auto;
+  object-fit: fill;
+  max-height: 435px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+img {
+  height: inherit;
+}
