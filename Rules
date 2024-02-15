@@ -13,7 +13,7 @@ end
 
 compile "/css/index.scss" do
   filter(:sass, syntax: :scss)
-#  filter(:rainpress)
+  filter(:rainpress)
   write("/css/index.css")
 end
 
