@@ -14,7 +14,7 @@ namespace :nanoc do
   desc "Produce the build/ directory"
   task :build, [:buildenv] do |t, args|
     Dir.chdir(cwd) do
-      ENV["buildenv"] = args.buildenv || "development"
+      ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
       Nanoc::CLI.run(["compile"])
     end
   end
