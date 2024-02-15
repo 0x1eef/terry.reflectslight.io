@@ -6,7 +6,7 @@ module Mixin::OpenGraph
   end
 
   def local_assigns(context)
-    {title: "About Terry",
+    {title: "In memory of Terry",
      description: "Terry Davis was a talented computer programmer who dedicated " \
                   "a large part of his life to the creation of TempleOS. Despite " \
                   "suffering from schizophrenia, Terry left this world with impressive " \
