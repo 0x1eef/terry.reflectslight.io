@@ -5,7 +5,9 @@ require "nanoc-webpack"
 require "nanoc-tidy"
 
 compile "/js/index.tsx" do
-  filter(:webpack, args: {"--config" => File.join(Dir.getwd, "webpack.development.js")})
+  buildenv = ENV["buildenv"] || "development"
+  args = {"--config" => File.join(Dir.getwd, "webpack.#{buildenv}.js")}
+  filter(:webpack, args:)
   write("/js/index.js")
 end
 
