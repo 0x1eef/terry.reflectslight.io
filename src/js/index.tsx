@@ -43,7 +43,8 @@ function App() {
         <div style={HEIGHT} className="flex flex-col h-full">
           <strong>In memory of Terry </strong>
           <p className="m-0 mt-1">
-            Terry Davis (1969 – 2018) was a talented computer
+            Terry Davis (1969 – 2018) <br/>
+            was a talented computer
             programmer who dedicated a large part of his life to the creation of{" "}
             <a target="_blank" href="https://templeos.org">TempleOS</a>. Despite
             suffering from schizophrenia, Terry left this world with impressive
