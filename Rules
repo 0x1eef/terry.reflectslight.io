@@ -20,7 +20,7 @@ end
 compile "/html/index.html.erb" do
   context = Ryo.from({})
   filter(:erb, locals: {context:})
-  filter(:tidy)
+  filter(:tidy, "-upper" => true)
   write "/index.html"
 end
 
