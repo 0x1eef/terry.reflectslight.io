@@ -57,6 +57,8 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
+    nanoc-gzip.rb (0.2.3)
+      nanoc (~> 4.12)
     nanoc-tidy.rb (0.2.2)
     nanoc-webpack.rb (0.5.6)
       ryo.rb (~> 0.4)
@@ -97,13 +99,14 @@ GEM
 
 PLATFORMS
   amd64-freebsd-14
-  x86_64-openbsd
+  ruby
 
 DEPENDENCIES
   adsf
   erb
   listen
   nanoc
+  nanoc-gzip.rb (~> 0.2.3)
   nanoc-tidy.rb
   nanoc-webpack.rb
   rainpress
@@ -111,4 +114,4 @@ DEPENDENCIES
   sass
 
 BUNDLED WITH
-   2.4.19
+   2.5.3

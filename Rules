@@ -3,12 +3,15 @@
 require "ryo"
 require "nanoc-webpack"
 require "nanoc-tidy"
+require "nanoc-gzip"
 
 compile "/js/index.tsx" do
   buildenv = ENV["buildenv"] || "development"
   args = {"--config" => File.join(Dir.getwd, "webpack.#{buildenv}.js")}
   filter(:webpack, args:)
   write("/js/index.js")
+  filter(:gzip)
+  write("/js/index.js.gz")
 end
 
 compile "/css/index.scss" do
