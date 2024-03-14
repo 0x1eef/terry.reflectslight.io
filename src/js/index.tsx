@@ -70,7 +70,7 @@ function App() {
             impressive accomplishments, and as an inspiration to many.
           </p>
           <p className="m-0">
-            <strong className="inline-block mb-1">Charity</strong>
+            <strong className="inline-block mb-1">Donation</strong>
             <br />
             Please consider making a donation to{" "}
             <a target="_blank" href="https://donate.bbrfoundation.org/">
