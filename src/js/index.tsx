@@ -51,12 +51,12 @@ function App() {
 
   7;
   return (
-    <div className="h-full flex flex-row max-w-screen-lg font-mono">
+    <div className="h-full flex flex-row max-w-screen-lg font-sans">
       <div className="flex flex-col place-content-center w-3/4 h-full">
         <Video video={video} onEnded={onEnded} />
       </div>
       <div className="flex flex-col w-1/4 text-sm place-content-center pl-5 h-full">
-        <div style={HEIGHT} className="flex flex-col h-full justify-between">
+        <div style={HEIGHT} className="flex flex-col h-full">
           <p className="m-0">
             <strong className="inline-block mb-1">In memory of Terry </strong>
             <br />
@@ -69,15 +69,13 @@ function App() {
             . Despite suffering from schizophrenia, Terry left this world with
             impressive accomplishments, and as an inspiration to many.
           </p>
-          <p className="m-0">
-            <strong className="inline-block mb-1">Donation</strong>
-            <br />
+          <p className="m-0 mt-5">
             Please consider making a donation to{" "}
             <a target="_blank" href="https://donate.bbrfoundation.org/">
               The Brain & Behavior Research Foundation
             </a>{" "}
-            or a similar act of charity to help those suffering with mental
-            illness.
+            or a similar act of charity that can help those suffering
+            with mental illness.
           </p>
         </div>
       </div>
