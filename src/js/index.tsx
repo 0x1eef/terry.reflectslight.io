@@ -32,9 +32,9 @@ function App() {
   const onHashChange = () => {
     const regexp = /v=(\d)/;
     if (regexp.test(location.hash)) {
-      const index = Number(RegExp.$1) - 1;
-      if (index !== i && VIDEOS[index]) {
-        setIndex(index);
+      const j = Number(RegExp.$1) - 1;
+      if (j !== i && VIDEOS[j]) {
+        setIndex(j);
       }
     }
   };
