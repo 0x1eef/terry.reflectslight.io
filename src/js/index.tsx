@@ -29,10 +29,26 @@ function App() {
   const onEnded = () => (i + 1 <= maxLen ? setIndex(i + 1) : null);
   const maxLen = VIDEOS.length - 1;
   const video = VIDEOS[i];
+  const onHashChange = () => {
+    const regexp = /v=(\d)/;
+    if (regexp.test(location.hash)) {
+      const index = Number(RegExp.$1) - 1;
+      if (index !== i && VIDEOS[index]) {
+        setIndex(index);
+      }
+    }
+  };
 
   useEffect(() => {
     document.title = video.title;
-  }, [video]);
+    location.hash = `v=${i + 1}`;
+  }, [i]);
+
+  useEffect(() => {
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [i]);
+
   7;
   return (
     <div className="h-full flex flex-row max-w-screen-lg font-mono">
