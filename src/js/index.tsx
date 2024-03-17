@@ -56,7 +56,7 @@ function App() {
         <Video video={video} onEnded={onEnded} />
       </div>
       <div className="flex flex-col w-1/4 text-sm place-content-center pl-5 h-full">
-        <div style={HEIGHT} className="flex flex-col h-full place-content-center">
+        <div style={HEIGHT} className="flex flex-col h-full place-content-start">
           <p className="m-0">
             <strong className="inline-block mb-1">In memory of Terry </strong>
             <br />
