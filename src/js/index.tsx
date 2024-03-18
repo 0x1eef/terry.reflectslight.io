@@ -4,8 +4,6 @@ import ReactDOM from "react-dom/client";
 type TVideo = { title: string; src: string };
 const HEIGHT = { maxHeight: "435px", height: "100%" };
 const VIDEOS: TVideo[] = [
-  { title: "With The Lord my protector", src: "/v/WithTheLordMyProtector.mp4" },
-  { title: "Dance on, Terry", src: "/v/DanceOnTerry.mp4" },
   { title: "Speaking in code", src: "/v/SpeakingInCode.mp4" },
   { title: "Rise to The Throne", src: "/v/RiseToTheThrone.mp4" },
 ];
