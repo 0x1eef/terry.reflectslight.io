@@ -64,8 +64,7 @@ function App() {
             <a target="_blank" href="https://templeos.org">
               TempleOS
             </a>
-            . Despite suffering from schizophrenia, Terry left this world with
-            impressive accomplishments, and as an inspiration to many.
+            .
           </p>
           <p className="m-0 mt-5">
             Please consider making a donation to{" "}
