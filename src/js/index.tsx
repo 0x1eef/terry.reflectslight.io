@@ -60,19 +60,12 @@ function App() {
             <br />
             Terry Davis (1969 – 2018) <br />
             was a talented computer programmer who dedicated a large part of his
-            life to the creation of{" "}
+            life to the creation and development of{" "}
             <a target="_blank" href="https://templeos.org">
               TempleOS
-            </a>
-            .
-          </p>
-          <p className="m-0 mt-5">
-            Please consider making a donation to{" "}
-            <a target="_blank" href="https://donate.bbrfoundation.org/">
-              The Brain & Behavior Research Foundation
-            </a>{" "}
-            or a similar act of charity that can help those suffering
-            with mental illness.
+            </a>.
+            <br/>
+            Rest in peace.
           </p>
         </div>
       </div>
