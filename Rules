@@ -27,7 +27,7 @@ compile "/html/index.html.erb" do
   write "/index.html"
 end
 
-compile "/i/*.png" do
+compile "/i/*.{gif,png}" do
   write(item.identifier.to_s)
 end
 
