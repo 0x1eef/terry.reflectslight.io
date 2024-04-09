@@ -75,7 +75,7 @@ function App() {
             <br/>
             Rest in peace.
           </p>
-          {imageLoaded && <img className="h-1/2" src="/i/terry.gif"/>}
+          {imageLoaded && <img className="h-1/2 pb-12" src="/i/terry.gif"/>}
         </div>
       </div>
     </div>
