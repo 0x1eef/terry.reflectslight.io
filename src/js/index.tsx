@@ -8,24 +8,9 @@ const VIDEOS: TVideo[] = [
   { title: "Rise to The Throne", src: "/v/RiseToTheThrone.mp4" },
 ];
 
-function Video({ video, onEnded }: { video: TVideo; onEnded: () => void }) {
-  return (
-    <video
-      className="w-full"
-      autoPlay
-      controls
-      poster="/i/TempleOS.png"
-      src={video.src}
-      onEnded={onEnded}
-      style={HEIGHT}
-    />
-  );
-}
-
 function App() {
   const [i, setIndex] = useState<number>(0);
-  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  const onEnded = () => (i + 1 <= maxLen ? setIndex(i + 1) : null);
+  const [isTerryVisible, setIsTerryVisible] = useState<boolean>(false);
   const maxLen = VIDEOS.length - 1;
   const video = VIDEOS[i];
   const img = new Image();
@@ -41,7 +26,7 @@ function App() {
   };
 
   useEffect(() => {
-    img.onload = () => setImageLoaded(true);
+    img.onload = () => setIsTerryVisible(true)
     img.src = "/i/terry.gif";
   }, []);
 
@@ -59,7 +44,23 @@ function App() {
   return (
     <div className="h-full flex flex-row max-w-screen-lg font-sans">
       <div className="flex flex-col place-content-center w-3/4 h-full">
-        <Video video={video} onEnded={onEnded} />
+        <video
+          className="w-full"
+          autoPlay
+          controls
+          poster="/i/TempleOS.png"
+          src={video.src}
+          onPlay={() => setIsTerryVisible(false)}
+          onPause={() => setIsTerryVisible(true)}
+          onEnded={() => {
+            if (i + 1 <= maxLen) {
+              setIndex(i + 1)
+            } else {
+              setIsTerryVisible(true)
+            }
+          }}
+          style={HEIGHT}
+        />
       </div>
       <div className="flex flex-col w-1/4 text-sm place-content-center pl-5 h-full">
         <div style={HEIGHT} className="flex flex-col h-full justify-between">
@@ -75,7 +76,7 @@ function App() {
             <br/>
             Rest in peace.
           </p>
-          {imageLoaded && <img className="h-1/2 pb-12" src="/i/terry.gif"/>}
+          {isTerryVisible && <img className="h-1/2 pb-12" src="/i/terry.gif"/>}
         </div>
       </div>
     </div>
