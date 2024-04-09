@@ -24,9 +24,12 @@ function Video({ video, onEnded }: { video: TVideo; onEnded: () => void }) {
 
 function App() {
   const [i, setIndex] = useState<number>(0);
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const onEnded = () => (i + 1 <= maxLen ? setIndex(i + 1) : null);
   const maxLen = VIDEOS.length - 1;
   const video = VIDEOS[i];
+  const img = new Image();
+
   const onHashChange = () => {
     const regexp = /v=(\d)/;
     if (regexp.test(location.hash)) {
@@ -36,6 +39,11 @@ function App() {
       }
     }
   };
+
+  useEffect(() => {
+    img.onload = () => setImageLoaded(true);
+    img.src = "/i/terry.gif";
+  }, []);
 
   useEffect(() => {
     document.title = video.title;
@@ -67,7 +75,7 @@ function App() {
             <br/>
             Rest in peace.
           </p>
-          <img className="h-3/5" src="/i/terry.gif"/>
+          {imageLoaded && <img className="h-1/2" src="/i/terry.gif"/>}
         </div>
       </div>
     </div>
