@@ -26,7 +26,7 @@ function App() {
   };
 
   useEffect(() => {
-    img.onload = () => setIsTerryVisible(true)
+    img.onload = () => setIsTerryVisible(true);
     img.src = "/i/terry.gif";
   }, []);
 
@@ -54,9 +54,9 @@ function App() {
           onPause={() => setIsTerryVisible(true)}
           onEnded={() => {
             if (i + 1 <= maxLen) {
-              setIndex(i + 1)
+              setIndex(i + 1);
             } else {
-              setIsTerryVisible(true)
+              setIsTerryVisible(true);
             }
           }}
           style={HEIGHT}
@@ -72,11 +72,17 @@ function App() {
             life to the creation and development of{" "}
             <a target="_blank" href="https://templeos.org">
               TempleOS
-            </a>.
-            <br/>
+            </a>
+            .
+            <br />
             Rest in peace.
           </p>
-          {isTerryVisible && <img className="h-1/2 pb-12" src="/i/terry.gif"/>}
+          {
+            <img
+              className={`h-1/2 pb-12 ${isTerryVisible ? "" : "hidden"}`}
+              src="/i/terry.gif"
+            />
+          }
         </div>
       </div>
     </div>
