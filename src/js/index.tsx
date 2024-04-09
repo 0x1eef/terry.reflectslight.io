@@ -77,12 +77,10 @@ function App() {
             <br />
             Rest in peace.
           </p>
-          {
-            <img
-              className={`h-1/2 pb-12 ${isTerryVisible ? "" : "hidden"}`}
-              src="/i/terry.gif"
-            />
-          }
+          <img
+            className={`h-1/2 pb-12 ${isTerryVisible ? "" : "hidden"}`}
+            src="/i/terry.gif"
+          />
         </div>
       </div>
     </div>
