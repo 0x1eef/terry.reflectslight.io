@@ -7,8 +7,7 @@ require "nanoc-gzip"
 
 compile "/js/index.tsx" do
   buildenv = ENV["buildenv"] || "development"
-  args = {"--config" => File.join(Dir.getwd, "webpack.#{buildenv}.js")}
-  filter(:webpack, args:)
+  filter(:webpack, argv: ["--config", File.join(Dir.getwd, "webpack.#{buildenv}.js")])
   write("/js/index.js")
   filter(:gzip)
   write("/js/index.js.gz")
