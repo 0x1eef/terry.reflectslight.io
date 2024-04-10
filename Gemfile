@@ -7,7 +7,7 @@ source "https://rubygems.org"
 gem "nanoc"
 gem "nanoc-webpack.rb"
 gem "nanoc-tidy.rb"
-gem "nanoc-gzip.rb", "~> 0.2.3"
+gem "nanoc-gzip.rb"
 gem "sass"
 gem "rainpress"
 
