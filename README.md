@@ -31,6 +31,11 @@ Instructions:
     $ rake nanoc:build
     $ rake server
 
+## Sources
+
+* [Github](https://github.com/0x1eef/terry.reflectslight.io)
+* [Gitlab](https://gitlab.com/0x1eef/terry.reflectslight.io)
+
 ## License
 
 The source code of this repository is released into the public domain.
