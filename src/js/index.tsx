@@ -50,7 +50,7 @@ function App() {
           controls
           poster="/i/TempleOS.png"
           src={video.src}
-          onPlay={() => setIsTerryVisible(false)}
+          onPlaying={() => setIsTerryVisible(false)}
           onPause={() => setIsTerryVisible(true)}
           onEnded={() => {
             if (i + 1 <= maxLen) {
