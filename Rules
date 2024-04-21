@@ -30,7 +30,7 @@ compile "/i/*.{gif,png}" do
   write(item.identifier.to_s)
 end
 
-compile "/v/*.mp4" do
+compile "/v/*.webm" do
   write(item.identifier.to_s)
 end
 
