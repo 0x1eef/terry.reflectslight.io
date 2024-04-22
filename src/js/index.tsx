@@ -78,7 +78,7 @@ function App() {
             Rest in peace.
           </p>
           <img
-            className={`h-1/2 pb-12 ${isTerryVisible ? "" : "hidden"}`}
+            className={`h-1/2 pb-12 ${isTerryVisible ? "fade-in" : "fade-out"}`}
             src="/i/terry.gif"
           />
         </div>
