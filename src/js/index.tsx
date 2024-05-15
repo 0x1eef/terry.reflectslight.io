@@ -72,10 +72,7 @@ function App() {
             life to the creation and development of{" "}
             <a target="_blank" href="https://templeos.org">
               TempleOS
-            </a>
-            .
-            <br />
-            Rest in peace.
+            </a>. Rest in peace.
           </p>
           <img
             className={`h-1/2 pb-12 ${isTerryVisible ? "fade-in" : "fade-out"}`}
