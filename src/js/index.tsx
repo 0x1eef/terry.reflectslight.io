@@ -64,7 +64,7 @@ function App() {
       </div>
       <div className="flex flex-col w-1/4 text-base place-content-center pl-5 h-full">
         <div style={HEIGHT} className="flex flex-col h-full justify-between">
-          <p className="m-0">
+          <p className="m-0 mb-10">
             <strong className="inline-block mb-1">In memory of Terry </strong>
             <br />
             Terry Davis (1969 – 2018) <br />
