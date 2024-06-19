@@ -6,6 +6,7 @@ const HEIGHT = { maxHeight: "435px", height: "100%" };
 const VIDEOS: TVideo[] = [
   { title: "Speaking in code", src: "/v/SpeakingInCode.webm" },
   { title: "Rise to The Throne", src: "/v/RiseToTheThrone.webm" },
+  { title: "TempleOS Hymn", src: "/v/TempleOSHymn.webm"}
 ];
 
 function App() {
