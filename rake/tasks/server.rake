@@ -6,7 +6,7 @@ task :server, [:protocol] do |_t, args|
   nanoc = Ryo.from(YAML.load_file("./nanoc.yaml"))
   h = args.to_h
   p = h[:protocol] || "tcp"
-  n = File.basename File.realpath(File.join(__dir__, "..", "."))
+  n = File.basename File.realpath(File.join(__dir__, "..", "..", "."))
   o = if p == "unix"
         {unix: nanoc.server.unix.path}
       else

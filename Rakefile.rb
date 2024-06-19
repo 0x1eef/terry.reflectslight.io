@@ -1,3 +1,7 @@
-load "tasks/nanoc.rake"
-load "tasks/server.rake"
-load "tasks/deploy.rake" if File.readable? File.join(Dir.getwd, "tasks", "deploy.rake")
+begin
+  load "rake/tasks/deploy.rake"
+rescue LoadError => ex
+  warn "[warn] #{ex.class}: #{ex.message}"
+end
+load "rake/tasks/nanoc.rake"
+load "rake/tasks/server.rake"
