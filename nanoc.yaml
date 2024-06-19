@@ -19,3 +19,9 @@ data_sources:
     encoding: UTF-8
     content_dir: src/
     layouts_dir: src/layouts
+
+server:
+  unix:
+    path: /tmp/terry.reflectslight.io
+  tcp:
+    port: 7000
