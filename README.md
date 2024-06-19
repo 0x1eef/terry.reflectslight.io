@@ -23,6 +23,9 @@ installed to build the website from source:
     git clone https://github.com/ReflectsLight/terry.reflectslight.io
     cd terry.reflectslight.io
 
+    # Setup build environment
+    bin/setup
+
     # List all tasks
     rake -T
 

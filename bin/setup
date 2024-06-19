@@ -1,0 +1,6 @@
+#!/bin/sh -ex
+
+##
+# main
+bundle install
+npm i
