@@ -31,6 +31,8 @@ function App() {
     img.src = "/i/terry.gif";
   }, []);
 
+  useEffect(onHashChange, []);
+
   useEffect(() => {
     document.title = video.title;
     location.hash = `v=${i + 1}`;
