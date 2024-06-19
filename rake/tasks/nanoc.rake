@@ -22,10 +22,8 @@ namespace :nanoc do
     require "listen"
     path = File.join(Dir.getwd, "src")
     Listen.to(path) do
-      Bundler.with_unbundled_env do
-        ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
-        Nanoc::CLI.run(["compile"])
-      end
+      ENV["buildenv"] = args.buildenv || ENV["buildenv"] || "development"
+      Nanoc::CLI.run(["compile"])
     end.start
     sleep
   rescue Interrupt
