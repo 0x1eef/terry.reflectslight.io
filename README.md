@@ -8,28 +8,32 @@ a talented computer programmer who dedicated a large part
 of his life to the creation of
 [TempleOS](https://templeos.org).
 
-## Build
+## Requirements
 
-Build requirements:
+The following languages and tools have to be
+installed to build the website from source:
 
-* Ruby v3+
-* nodejs v18+
-* [tidy-html5](https://github.com/htacg/tidy-html5#readme)
+* Ruby 3.1 (or later)
+* NodeJS v18.15 (or later)
+* [tidy-html5](https://github.com/htacg/tidy-html5)
 
-Instructions:
+## Development
 
     # Clone repository
-    $ git clone https://github.com/0x1eef/terry.reflectslight.io
-    $ cd terry.reflectslight.io
+    git clone https://github.com/ReflectsLight/terry.reflectslight.io
+    cd terry.reflectslight.io
 
-    # Install dependencies
-    $ bundle install
-    $ npm i
+    # List all tasks
+    rake -T
 
-    # Build website
-    # Run server on http://localhost:3000
-    $ rake nanoc:build
-    $ rake server
+    # Build website (dev build)
+    rake nanoc:build
+
+    # Build website (production build)
+    rake nanoc:build[production]
+
+    # Start web server
+    rake server
 
 ## Sources
 
@@ -38,4 +42,4 @@ Instructions:
 
 ## License
 
-The source code of this repository is released into the public domain.
+The source code of this repository is released into the public domain
