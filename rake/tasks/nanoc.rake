@@ -1,8 +1,8 @@
-namespace :nanoc do
-  require "bundler/setup"
-  require "nanoc"
-  cwd = File.realpath File.join(__dir__, "..", "..")
+require "bundler/setup"
+require "nanoc"
+cwd = File.realpath File.join(__dir__, "..", "..")
 
+namespace :nanoc do
   desc "Clean the build/ directory"
   task :clean do
     Dir.chdir(cwd) do
