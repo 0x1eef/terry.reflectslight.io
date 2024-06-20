@@ -1,3 +1,8 @@
+require "bundler/setup"
+require "nanoc"
+require "ryo"
+require "yaml"
+
 begin
   load "rake/tasks/deploy.rake"
 rescue LoadError => ex
