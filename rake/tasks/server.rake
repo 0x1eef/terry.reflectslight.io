@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-cwd = File.realpath(File.join(__dir__, "..", "..", "."))
+cwd = File.realpath File.join(__dir__, "..", "..", ".")
 desc "Start web server"
 task :server, [:protocol] do |_t, args|
   require "server"
