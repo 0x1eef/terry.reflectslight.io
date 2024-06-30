@@ -71,8 +71,8 @@ function App() {
             <strong className="inline-block mb-1">In memory of Terry </strong>
             <br />
             Terry Davis (1969 – 2018) <br />
-            was a talented computer programmer who dedicated a large part of his
-            life to the creation and development of{" "}
+            was a talented computer programmer who dedicated a large portion
+            of his life to the creation and development of{" "}
             <a target="_blank" href="https://templeos.org">
               TempleOS
             </a>. Rest in peace.
