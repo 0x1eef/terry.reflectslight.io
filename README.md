@@ -1,11 +1,9 @@
 ## About
 
-[terry.reflectslight.io](https://terry.reflectslight.io).
-is a [nanoc website](https://nanoc.app) made in memory of
-Terry Davis (1969 – 2018), a talented computer programmer
-who dedicated a large portion of his life to the creation of
-[TempleOS](https://templeos.org). The website also serves as
-an example of how nanoc and webpack can be combined via
+[terry.reflectslight.io](https://terry.reflectslight.io)
+is a [nanoc website](https://nanoc.app) created
+in memory of Terry Davis (1969 – 2018). The website also
+serves as an example of how to use nanoc with webpack via
 [0x1eef/nanoc-webpack.rb](https://github.com/0x1eef/nanoc-webpack.rb).
 
 ## Requirements
@@ -19,14 +17,14 @@ installed to build the website from source:
 
 ## Development
 
-    # Clone repository
+    # Clone
     git clone https://github.com/ReflectsLight/terry.reflectslight.io
     cd terry.reflectslight.io
 
     # Setup build environment
     bin/setup
 
-    # List all tasks
+    # List tasks
     rake -T
 
     # Build website (dev build)
