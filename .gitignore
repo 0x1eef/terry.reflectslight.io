@@ -4,4 +4,5 @@
 /src/v/
 /rake/tasks/deploy.rake
 /tmp/
+/nanoc.yaml
 *.log
